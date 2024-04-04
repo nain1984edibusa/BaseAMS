@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "7f9e1df7-4459-411e-be4f-1c55075a5722",
+		"name": "CURS-000116-ARQMS116",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "negocio",
+			"item": [
+				{
+					"name": "ms-negocio-gestion-clientes",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/v1/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"v1",
+										"clientes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ms-negocio-gestion-productos",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8084/api/v1/productos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"v1",
+										"productos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "administracion",
+			"item": [
+				{
+					"name": "ms-administracion-server-config",
+					"item": [
+						{
+							"name": "Healt-check",
+							"item": [
+								{
+									"name": "actuator",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/actuator",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"actuator"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "actuator-health",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/actuator/health",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"actuator",
+												"health"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "actuator-health-liveness",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/actuator/health/liveness",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"actuator",
+												"health",
+												"liveness"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "microservices",
+							"item": [
+								{
+									"name": "ms-negocio-gestion-productos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/ms-negocio-gestion-productos/default",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"ms-negocio-gestion-productos",
+												"default"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ms-negocio-gestion-clientes",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/ms-negocio-gestion-clientes/default",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"ms-negocio-gestion-clientes",
+												"default"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
